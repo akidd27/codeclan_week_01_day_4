@@ -28,7 +28,12 @@ def get_completed_tasks(list):
 
 ## Get tasks where time_taken is at least a given time
 def get_tasks_taking_at_least(list, time):
-    pass
+    tasks_at_least_time = []
+
+    for task in list:
+        if task["time_taken"] >= time:
+            tasks_at_least_time.append(task)
+    return tasks_at_least_time
 
 ## Find a task with a given description
 def get_task_with_description(list, description):
