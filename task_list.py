@@ -10,7 +10,12 @@ tasks = [
 
 ## Get a list of uncompleted tasks
 def get_uncompleted_tasks(list):
-    pass
+    uncompleted_tasks = []
+
+    for task in list:
+        if not task["completed"]:
+            uncompleted_tasks.append(task)
+    return uncompleted_tasks
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):
